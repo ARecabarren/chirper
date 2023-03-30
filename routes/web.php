@@ -33,4 +33,5 @@ Route::resource('chirps', ChirpController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
 
+Route::mailPreview();    
 require __DIR__.'/auth.php';
